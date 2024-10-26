@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  api-postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: "api_cadastro_de_paises"
+      POSTGRES_USER: "api"
+      POSTGRES_PASSWORD: "api"
+    ports:
+      - "15433:5432"
+    volumes:
+      - ./docker-content/PostgreSQL:/var/lib/postgresql/data
